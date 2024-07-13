@@ -51,7 +51,7 @@ const PizzaDetails = ({ pizza }) => {
       </div>
     </div>
     {/* details */}
-    <div className="bg-pink-100 flex flex-col flex-1">
+    <div className=" flex flex-col flex-1">
       <div className="flex-1 p-2 text-center lg:text-left">
         <div className="flex-1 bg-white overflow-y-scroll h-[46vh] scrollbar-thin scrollbar-thumb-gray-200 scrollbar-track-white pr-2">
           {/* name */}
@@ -70,9 +70,9 @@ const PizzaDetails = ({ pizza }) => {
             </div>
           </div>
           {/* size selection */}
-          <SizeSelection />
+          <SizeSelection pizza={pizza} size={size} setSize={setSize} />
           {/* crust selection */}
-          <CrustSelection />
+          <CrustSelection crust={crust} setCrust={setCrust} />
           {/* toppings */}
           <div>Choose topping</div>
           {/* topping list */}
