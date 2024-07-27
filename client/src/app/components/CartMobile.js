@@ -9,7 +9,7 @@ import CartItem from "./CartItem";
 
 const CartMobile = () => {
   const { cart, isOpen } = useContext(CartContext)
-  return <div className={`${isOpen ? "bottom-0" : "-bottom-full"} bg-white fixed w-full h-full left-0 z-20 transition-all duration-300 lg:hidden flex flex-col`}>
+  return <div className={`${isOpen ? "bottom-0" : "-bottom-full"} bg-white fixed w-full h-full left-0 z-20 transition-all duration-300  flex flex-col lg:hidden`}>
     {/* top */}
     <CartTop />
     {/* cart items */}
