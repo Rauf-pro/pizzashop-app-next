@@ -27,7 +27,7 @@ const CartItem = ({ pizza }) => {
               <BiMinus />
             </div>
             {/* pizza amount */}
-            <div className="font-semibold flex flex-1 max-w-[30px] justify-center items-center text-sm">1</div>
+            <div className="font-semibold flex flex-1 max-w-[30px] justify-center items-center text-sm">{pizza.amount}</div>
             {/* increase quantity */}
             <div className='w-[18px] h-[18px] flex items-center justify-center cursor-pointer text-white gradient rounded-full'>
               <BiPlus />
