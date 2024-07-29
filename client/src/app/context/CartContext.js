@@ -53,8 +53,42 @@ const CartProvider = ({ children }) => {
         setIsOpen(true);
     }
 
+    // remove item from cart
+    const removeItem = (id, price, crust) => {
+        const itemIndex = cart.findIndex((item) => item.id === id && item.price === price && item.crust === crust);
+        if (itemIndex !== -1) {
+            const newCart = [...cart];
+            newCart.splice(itemIndex, 1);
+            setCart(newCart);
+
+        }
+
+    }
+
+    // increment amount
+    const increaseAmount = (id, price) => {
+        const itemIndex = cart.findIndex((item) => item.id === id && item.price === price);
+        if (itemIndex !== -1) {
+            const newCart = [...cart];
+            newCart[itemIndex].amount += 1;
+            setCart(newCart);
+        }
+    }
+
+    // decrement amount
+    const decreaseAmount = (id, price) => {
+        const itemIndex = cart.findIndex((item) => item.id === id && item.price === price);
+        if (itemIndex !== -1) {
+            const newCart = [...cart];
+            if (newCart[itemIndex].amount > 1) {
+                newCart[itemIndex].amount -= 1;
+            }
+            setCart(newCart);
+        }
+    }
+
     return (
-        <CartContext.Provider value={{ isOpen, setIsOpen, addToCart, cart }}>
+        <CartContext.Provider value={{ isOpen, setIsOpen, addToCart, cart, removeItem, increaseAmount, decreaseAmount }}>
             {children}
         </CartContext.Provider>)
 }
