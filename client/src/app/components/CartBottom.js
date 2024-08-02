@@ -70,7 +70,7 @@ const CartBottom = () => {
           <div onClick={closeModal} className="absolute z-30 right-2 top-2 hover:scale-110 duration-200 cursor-pointer">
             <IoCloseOutline className="text-4xl text-orange"/>
           </div>
-          <CheckoutDetails closeModal={closeModal} />
+          <CheckoutDetails closeModal={closeModal} setModal={setModal} />
         </Modal>)}
 
     </>
