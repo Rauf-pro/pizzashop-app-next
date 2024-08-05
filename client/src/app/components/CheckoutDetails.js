@@ -5,8 +5,42 @@ import Image from 'next/image'
 import { CartContext } from '../context/CartContext'
 
 const CheckoutDetails = ({ setModal }) => {
-  const { cart, setCart, cartTotal } = useContext(CartContext)
-  const [successMsg, setSuccessMsg] = useState(false)
+  const { cart, setCart, cartTotal } = useContext(CartContext);
+  const [successMsg, setSuccessMsg] = useState(false);
+  const [count, setCount] = useState(5);
+
+  // counter
+  useEffect(() => {
+    if (successMsg) {
+      const timer = setTimeout(() => {
+        if (count > 1) {
+          setCount(count - 1)
+        }
+      }, 1000)
+
+      // clear timer
+      return () => clearTimeout(timer)
+    }
+  });
+
+  // close modal after 5 sec
+
+  useEffect(() => {
+    if (successMsg) {
+      const timer = setTimeout(() => {
+        setSuccessMsg(false);
+        // clear cart
+        setCart([])
+
+        // close modal
+        setModal(false)
+      }, 5000)
+      // clear timer
+
+      return () => clearTimeout(timer)
+    }
+  }, [successMsg])
+
   return (
     <div>
       {successMsg ? (
@@ -16,7 +50,7 @@ const CheckoutDetails = ({ setModal }) => {
           </h2>
           <Image src={'/success-1.gif'} width={150} height={150} alt="" />
           <div>
-            This window will close in <span>5</span> seconds
+            This window will close in <span>{count}</span> seconds
           </div>
         </div>
       ) : (
