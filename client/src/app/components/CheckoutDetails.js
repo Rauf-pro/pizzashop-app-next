@@ -5,9 +5,9 @@ import Image from 'next/image'
 import { CartContext } from '../context/CartContext'
 
 const CheckoutDetails = ({ setModal }) => {
-  const { cart, setCart, cartTotal } = useContext(CartContext);
-  const [successMsg, setSuccessMsg] = useState(false);
-  const [count, setCount] = useState(5);
+  const { cart, setCart, cartTotal } = useContext(CartContext)
+  const [successMsg, setSuccessMsg] = useState(false)
+  const [count, setCount] = useState(5)
 
   // counter
   useEffect(() => {
@@ -21,14 +21,14 @@ const CheckoutDetails = ({ setModal }) => {
       // clear timer
       return () => clearTimeout(timer)
     }
-  });
+  })
 
   // close modal after 5 sec
 
   useEffect(() => {
     if (successMsg) {
       const timer = setTimeout(() => {
-        setSuccessMsg(false);
+        setSuccessMsg(false)
         // clear cart
         setCart([])
 

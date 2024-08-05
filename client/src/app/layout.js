@@ -10,6 +10,7 @@ import CartDesktop from './components/CartDesktop'
 import CartProvider from './context/CartContext'
 // import next fonts
 import { Bangers, Quicksand, Roboto_Condensed } from 'next/font/google'
+import Footer from './components/Footer'
 
 // import all fonts
 const quicksand = Quicksand({
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
           <CartMobile />
           {children}
           <CartDesktop />
+          <Footer />
         </body>
       </html>
     </CartProvider>
