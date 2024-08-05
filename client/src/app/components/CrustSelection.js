@@ -1,4 +1,3 @@
-
 const CrustSelection = ({ crust, setCrust }) => {
   return (
     <div className="flex justify-center items-center lg:justify-start">
@@ -10,7 +9,7 @@ const CrustSelection = ({ crust, setCrust }) => {
       checked:bg-gradient-to-r checked:from-primary checked:to-secondary checked:border-secondary cursor-pointer"
             type="radio"
             name="crust"
-            value='traditional'
+            value="traditional"
             checked={crust === 'traditional'}
             onChange={(e) => setCrust(e.target.value)}
           />
@@ -22,14 +21,15 @@ const CrustSelection = ({ crust, setCrust }) => {
       checked:bg-gradient-to-r checked:from-primary checked:to-secondary checked:border-secondary cursor-pointer"
             type="radio"
             name="crust"
-            value='thin'
+            value="thin"
             checked={crust === 'thin'}
             onChange={(e) => setCrust(e.target.value)}
           />
           Thin
         </label>
       </div>
-    </div>);
-};
+    </div>
+  )
+}
 
-export default CrustSelection;
+export default CrustSelection
