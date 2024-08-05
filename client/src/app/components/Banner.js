@@ -39,66 +39,65 @@ const Banner = () => {
             </div>
             {/* chilli img 1 */}
             <MouseParallaxChild factorX={0.2} factorY={0.3} className='absolute top-6 left-4 hidden xl:flex'>
-              <Image 
-              src={'/chilli-1.png'} 
-              width={160} 
-              height={84} 
-              alt='' 
-              priority={1}
+              <Image
+                src={'/chilli-1.png'}
+                width={160}
+                height={84}
+                alt=''
+                priority={1}
               />
             </MouseParallaxChild>
             {/* chilli img 2 */}
             <MouseParallaxChild factorX={0.4} factorY={0.4} className='absolute top-6 -left-4 hidden xl:flex'>
-              <Image 
-              src={'/chilli-2.png'} 
-              width={130} 
-              height={84} 
-              alt='' 
-              priority={1}
+              <Image
+                src={'/chilli-2.png'}
+                width={130}
+                height={84}
+                alt=''
+                priority={1}
               />
             </MouseParallaxChild>
-             {/* garlic img 1 */}
-             <MouseParallaxChild factorX={0.6} factorY={0.6} className='absolute top-80 -left-24 hidden xl:flex'>
-              <Image 
-              src={'/garlic-1.png'} 
-              width={84} 
-              height={72} 
-              alt='' 
-              priority={1}
+            {/* garlic img 1 */}
+            <MouseParallaxChild factorX={0.6} factorY={0.6} className='absolute top-80 -left-24 hidden xl:flex'>
+              <Image
+                src={'/garlic-1.png'}
+                width={84}
+                height={72}
+                alt=''
+                priority={1}
               />
             </MouseParallaxChild>
-             {/* garlic img 2 */}
-             <MouseParallaxChild factorX={0.3} factorY={0.6} className='absolute top-[22rem] -left-8 hidden xl:flex'>
-              <Image 
-              src={'/garlic-2.png'} 
-              width={100} 
-              height={72} 
-              alt='' 
-              priority={1}
+            {/* garlic img 2 */}
+            <MouseParallaxChild factorX={0.3} factorY={0.6} className='absolute top-[22rem] -left-8 hidden xl:flex'>
+              <Image
+                src={'/garlic-2.png'}
+                width={100}
+                height={72}
+                alt=''
+                priority={1}
               />
             </MouseParallaxChild>
             {/* garlic img 3 */}
             <MouseParallaxChild factorX={0.4} factorY={1} className='absolute top-96 -left-20 hidden xl:flex'>
-              <Image 
-              src={'/garlic-3.png'} 
-              width={100} 
-              height={72} 
-              alt='' 
-              priority={1}
+              <Image
+                src={'/garlic-3.png'}
+                width={100}
+                height={72}
+                alt=''
+                priority={1}
               />
             </MouseParallaxChild>
-             {/* leaves */}
-             <MouseParallaxChild factorX={0.2} factorY={0.2} className='absolute top-96 left-12 hidden xl:flex'>
-              <Image 
-              src={'/leaves.png'} 
-              width={180} 
-              height={72} 
-              alt='' 
-              priority={1}
+            {/* leaves */}
+            <MouseParallaxChild factorX={0.2} factorY={0.2} className='absolute top-96 left-12 hidden xl:flex'>
+              <Image
+                src={'/leaves.png'}
+                width={180}
+                height={72}
+                alt=''
+                priority={1}
               />
             </MouseParallaxChild>
           </MouseParallaxChild>
-          
         </MouseParallaxContainer>
       </div>
     </section>);

@@ -383,7 +383,7 @@ export default function Home() {
     {/* pizza grid */}
       <div className='grid grid-cols-2 gap-[15px] md:grid-cols-3 xl:grid-cols-4 xl:gap-[30px] py-12'>
         {pizzas.map((pizza) => {
-          return <Pizza pizza={pizza} />
+          return <Pizza pizza={pizza} key={pizza.id} />
         })}
       </div>
     </div>
